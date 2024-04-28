@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+  labels:
+    environment: development
+    course: sit323
+    week: 6
+    grade: pass
+spec:
+  containers:
+  - image: 
+    name: moxNodeApp
+    ports:
+    - containerPort: 3040
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
