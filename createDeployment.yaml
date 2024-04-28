@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mox-node-deployment
+  labels:
+    app: mox-node-app
+    tier: frontend
+    environment: development
+    course: sit323
+    week: "6"
+    grade: pass
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: mox-container
+        image: nousernamesavailable/moxnodeapp:0.0.2
+        ports:
+        - containerPort: 3040

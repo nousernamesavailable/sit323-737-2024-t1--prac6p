@@ -1,17 +1,19 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: mypod
+  name: mox-node-pod
   labels:
+    tier: frontend
     environment: development
     course: sit323
-    week: 6
+    week: "6"
     grade: pass
 spec:
   containers:
-  - image: 
-    name: moxNodeApp
+  - image: nousernamesavailable/moxnodeapp:0.0.2
+    name: moxnodeapp
     ports:
     - containerPort: 3040
   dnsPolicy: ClusterFirst
   restartPolicy: Always
+  
