@@ -17,3 +17,8 @@ then, open browser, go to:
 http://localhost:3040/mod?n1=10&n2=3
 which should load as: 
 {"statuscode":200,"data":1}
+
+
+TO DO FOR TOMORROW: 
+try re-running the pods yo
+idk 
