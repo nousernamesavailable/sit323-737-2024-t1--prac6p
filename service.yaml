@@ -4,7 +4,7 @@ metadata:
   name: mox-app-service
 spec:
   selector:
-    app: moxapp
+    application: moxapp
   ports:
     - protocol: TCP
       port: 3040
